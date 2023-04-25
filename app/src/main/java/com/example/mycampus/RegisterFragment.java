@@ -249,7 +249,9 @@ public class RegisterFragment extends Fragment implements View.OnClickListener {
                 FirebaseDatabase.getInstance().getReference().addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
-                        if (snapshot.hasChild("ClubHeads")) {
+                        if(snapshot.child("Students").hasChild(Enrollment))
+                            Toast.makeText(getActivity(),"This user is already registerd",Toast.LENGTH_SHORT).show();
+                        else if (snapshot.hasChild("ClubHeads")) {
                             Boolean flag=true;
                             for (DataSnapshot data : snapshot.child("ClubHeads").getChildren()) {
                                 if (data.child("club").getValue().toString().equals(Club)) {

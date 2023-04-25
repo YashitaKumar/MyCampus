@@ -115,7 +115,7 @@ public class LoginFragment extends Fragment implements View.OnClickListener{
                         if(mAuth.getCurrentUser().isEmailVerified()==true)
                         {
                             Toast.makeText(getActivity(),"LogIn successfull",Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(getActivity(),DashboardActivity.class));
+                            startActivity(new Intent(getActivity(),DhabbaActivity.class));
                         }
                         else
                         {
