@@ -13,6 +13,13 @@
         android:theme="@style/Theme.MyCampus"
         tools:targetApi="31">
         <activity
+            android:name=".AttendanceTeacherActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".DhabbaActivity"
             android:exported="false">
             <meta-data

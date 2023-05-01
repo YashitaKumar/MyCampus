@@ -1,5 +1,6 @@
 package com.example.mycampus;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -18,6 +19,10 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -30,7 +35,7 @@ public class LoginFragment extends Fragment implements View.OnClickListener{
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-    EditText email,password;
+    EditText email,password,id;
     String emailVal,passwordVal;
     FirebaseAuth mAuth;
     Button loginBtn;
@@ -70,6 +75,7 @@ public class LoginFragment extends Fragment implements View.OnClickListener{
         }
     }
 
+    @SuppressLint("MissingInflatedId")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -78,6 +84,7 @@ public class LoginFragment extends Fragment implements View.OnClickListener{
         email = view.findViewById(R.id.emailL);
         password = view.findViewById(R.id.passwordL);
         loginBtn=view.findViewById(R.id.loginBtn);
+        id=view.findViewById(R.id.idVal);
         loginBtn.setOnClickListener(this);
 
 
@@ -115,7 +122,33 @@ public class LoginFragment extends Fragment implements View.OnClickListener{
                         if(mAuth.getCurrentUser().isEmailVerified()==true)
                         {
                             Toast.makeText(getActivity(),"LogIn successfull",Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(getActivity(),DhabbaActivity.class));
+                            FirebaseDatabase.getInstance().getReference().addListenerForSingleValueEvent(new ValueEventListener() {
+                                @Override
+                                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                    String idVal = id.getText().toString();
+                                    if(snapshot.child("Students").hasChild(idVal))
+                                    {
+                                        Intent intent = new Intent(getActivity(),DhabbaActivity.class);
+                                        startActivity(intent);
+                                    }
+                                    else if(snapshot.child("Teachers").hasChild(idVal))
+                                    {
+                                        Intent intent = new Intent(getActivity(),AttendanceTeacherActivity.class);
+                                        intent.putExtra("id",idVal);
+                                        startActivity(intent);
+                                    }
+                                    else
+                                        Toast.makeText(getActivity(),"Please Enter correct id",Toast.LENGTH_SHORT).show();
+
+
+                                }
+
+                                @Override
+                                public void onCancelled(@NonNull DatabaseError error) {
+
+                                }
+                            });
+
                         }
                         else
                         {

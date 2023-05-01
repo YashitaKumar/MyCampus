@@ -17,25 +17,25 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:orientation="horizontal">
-            <TextView
-                android:id="@+id/itemName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="itemName"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/itemName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="itemName"/>
 
-            <ImageView
-                android:id="@+id/itemPic"
-                android:layout_width="50dp"
-                android:layout_height="match_parent"
-                android:scaleType="fitXY"
-                android:scaleX="1.5"
-                android:src="@drawable/kathi" />
+                <ImageView
+                    android:id="@+id/itemPic"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:scaleX="1.5"
+                    android:src="@drawable/kathi" />
 
-        </LinearLayout>
+            </LinearLayout>
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/items"
                 android:layout_width="match_parent"

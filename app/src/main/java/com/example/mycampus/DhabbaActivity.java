@@ -2,11 +2,14 @@ package com.example.mycampus;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.view.GestureDetector;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.TextView;
@@ -28,6 +31,8 @@ public class DhabbaActivity extends AppCompatActivity implements View.OnClickLis
     List<DhabbaModel> list;
     TextView maggie,smoothie,selected,urban;
     FrameLayout frameLayout;
+    ConstraintLayout constraintLayout;
+    SwipeListener swipeListener;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -44,12 +49,102 @@ public class DhabbaActivity extends AppCompatActivity implements View.OnClickLis
         maggie.setOnClickListener(this);
         smoothie.setOnClickListener(this);
         urban.setOnClickListener(this);
+        constraintLayout=findViewById(R.id.dhabba);
 
         forMaggie();
+        swipeListener= new SwipeListener(constraintLayout);
 
 
 
 
+    }
+    public class SwipeListener implements View.OnTouchListener{
+
+        GestureDetector gestureDetector;
+        int count=0;
+        public SwipeListener(View view) {
+            int threshold = 0;
+            int velocity_threshold= 0;
+
+
+            GestureDetector.SimpleOnGestureListener listener = new GestureDetector.SimpleOnGestureListener(){
+
+                @Override
+                public boolean onDown(MotionEvent e) {
+                    return true;
+                }
+
+                @Override
+                public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
+                    float xDiff = e2.getX() - e1.getX();
+                    float yDiff = e2.getY() - e1.getY();
+
+                    if(Math.abs(xDiff) > Math.abs(yDiff))
+                    {
+                        if(Math.abs(xDiff)>threshold && Math.abs(velocityX)> velocity_threshold){
+                            if(xDiff>0){
+                                //Swipe Right
+                                if(count!=0)
+                                {
+                                    count-=1;
+                                    if(count==0)
+                                    {
+                                        selected.animate().x(0).setDuration(100);
+                                        forMaggie();
+                                    }
+                                    else if(count==1)
+                                    {
+                                        int size=smoothie.getWidth();
+                                        selected.animate().x(size).setDuration(100);
+                                        forSmoothie();
+                                    }
+                                    else if(count==2) {
+                                        int size2 = urban.getWidth();
+                                        int size1 = smoothie.getWidth();
+                                        selected.animate().x((size2 + size1)).setDuration(100);
+                                        forUrban();
+                                    }
+                                }
+
+                            }
+                            else
+                            {
+                                if(count!=2)
+                                {
+                                    count+=1;
+                                    if(count==0)
+                                    {
+                                        selected.animate().x(0).setDuration(100);
+                                        forMaggie();
+                                    }
+                                    else if(count==1)
+                                    {
+                                        int size=smoothie.getWidth();
+                                        selected.animate().x(size).setDuration(100);
+                                        forSmoothie();
+                                    }
+                                    else if(count==2) {
+                                        int size2 = urban.getWidth();
+                                        int size1 = smoothie.getWidth();
+                                        selected.animate().x((size2 + size1)).setDuration(100);
+                                        forUrban();
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    return false;
+                }
+            };
+            gestureDetector = new GestureDetector(listener);
+            view.setOnTouchListener(this);
+        }
+
+        @Override
+        public boolean onTouch(View view, MotionEvent motionEvent) {
+            return gestureDetector.onTouchEvent(motionEvent);
+        }
     }
 
     void forMaggie()
@@ -159,4 +254,6 @@ public class DhabbaActivity extends AppCompatActivity implements View.OnClickLis
                             break;
         }
     }
+
+
 }

@@ -190,7 +190,7 @@ public class RegisterFragment extends Fragment implements View.OnClickListener {
                                 String Teacher_id;
                                 Teacher_id = teacherId.getText().toString();
                                 TeacherModel teacherModel = new TeacherModel(Name, Email, Password, Integer.valueOf(Phone), Integer.valueOf(Teacher_id));
-                                FirebaseDatabase.getInstance().getReference("/Teachers").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(teacherModel).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                FirebaseDatabase.getInstance().getReference("/Teachers").child(Teacher_id).setValue(teacherModel).addOnCompleteListener(new OnCompleteListener<Void>() {
                                     @Override
                                     public void onComplete(@NonNull Task<Void> task) {
                                         Toast.makeText(getActivity(), "Registration Completed", Toast.LENGTH_SHORT).show();

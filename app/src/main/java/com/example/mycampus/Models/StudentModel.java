@@ -70,4 +70,5 @@ public class StudentModel {
     String name,email,club,password,head;
     int phone,enrollmentNo;
 
+
 }

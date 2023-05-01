@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:ignore="MissingDefaultResource">
+
+<!--    <androidx.constraintlayout.widget.Guideline-->
+<!--        android:id="@+id/side1"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical"-->
+<!--        app:layout_constraintGuide_percent="0.1"/>-->
+<!--    <androidx.constraintlayout.widget.Guideline-->
+<!--        android:id="@+id/side2"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical"-->
+<!--        app:layout_constraintGuide_percent="0.9"/>-->
+<!--    <androidx.constraintlayout.widget.Guideline-->
+<!--        android:id="@+id/guide1"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        app:layout_constraintGuide_percent="0.05"/>-->
+<!--    <androidx.constraintlayout.widget.Guideline-->
+<!--        android:id="@+id/guide2"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        app:layout_constraintGuide_percent="0.11"/>-->
+
+<!--    <androidx.constraintlayout.widget.Guideline-->
+<!--        android:id="@+id/guide3"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        app:layout_constraintGuide_percent="0.13"/>-->
+<!--    <androidx.constraintlayout.widget.Guideline-->
+<!--        android:id="@+id/guide4"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        app:layout_constraintGuide_percent="0.19"/>-->
+<!--    <androidx.constraintlayout.widget.Guideline-->
+<!--        android:id="@+id/guide5"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        app:layout_constraintGuide_percent="0.21"/>-->
+<!--    <androidx.constraintlayout.widget.Guideline-->
+<!--        android:id="@+id/guide6"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        app:layout_constraintGuide_percent="0.27"/>-->
+<!--    <androidx.constraintlayout.widget.Guideline-->
+<!--        android:id="@+id/guide7"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        app:layout_constraintGuide_percent="0.39"/>-->
+<!--    <androidx.constraintlayout.widget.Guideline-->
+<!--        android:id="@+id/guide8"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        app:layout_constraintGuide_percent="0.45"/>-->
+<!--    <androidx.constraintlayout.widget.Guideline-->
+<!--        android:id="@+id/guide9"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        app:layout_constraintGuide_percent="0.29"/>-->
+<!--    <androidx.constraintlayout.widget.Guideline-->
+<!--        android:id="@+id/guide10"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        app:layout_constraintGuide_percent="0.35"/>-->
+
+    <!--        app:layout_constraintBottom_toTopOf="@+id/guide2"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/side2"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/side1"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/guide1"-->
+
+    <!--        app:layout_constraintBottom_toTopOf="@+id/guide4"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/side2"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/side1"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/guide3"-->
+
+    <!--    app:layout_constraintBottom_toTopOf="@+id/guide10"-->
+<!--    app:layout_constraintEnd_toStartOf="@+id/side2"-->
+<!--    app:layout_constraintStart_toStartOf="@+id/side1"-->
+<!--    app:layout_constraintTop_toTopOf="@+id/guide9"-->
+    <!--    app:layout_constraintBottom_toTopOf="@+id/guide6"-->
+<!--    app:layout_constraintEnd_toStartOf="@+id/side2"-->
+<!--    app:layout_constraintStart_toStartOf="@+id/side1"-->
+<!--    app:layout_constraintTop_toTopOf="@+id/guide5"-->
+
+    <EditText
+        android:id="@+id/subject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Subject Name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.185" />
+
+    <EditText
+        android:id="@+id/batch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Batch eg. 2020, 2021 etc"
+        app:layout_constraintBottom_toTopOf="@+id/classId"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subject" />
+
+    <EditText
+        android:id="@+id/classId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="232dp"
+        android:hint="Create a class ID"
+        app:layout_constraintBottom_toTopOf="@+id/teacherName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/teacherName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="352dp"
+        android:hint="teacher name"
+        app:layout_constraintBottom_toTopOf="@+id/Classsubmit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/Classsubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="224dp"
+        android:text="Add A Class"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+    <!--    app:layout_constraintBottom_toTopOf="@+id/guide8"-->
+<!--    app:layout_constraintEnd_toStartOf="@+id/side2"-->
+<!--    app:layout_constraintStart_toStartOf="@+id/side1"-->
+<!--    app:layout_constraintTop_toTopOf="@+id/guide7"-->
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
