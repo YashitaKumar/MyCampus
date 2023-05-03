@@ -37,7 +37,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.12"
+            app:layout_constraintGuide_percent="0.13"
             />
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guide5"
@@ -51,7 +51,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.22"
+            app:layout_constraintGuide_percent="0.23"
             />
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guide7"
@@ -65,7 +65,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.32"
+            app:layout_constraintGuide_percent="0.33"
             />
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guide9"
@@ -93,7 +93,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.48"
+            app:layout_constraintGuide_percent="0.47"
             />
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guide13"
@@ -114,7 +114,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.65"
+            app:layout_constraintGuide_percent="0.70"
             />
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guide22"
@@ -127,9 +127,13 @@
             android:id="@+id/nameR"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:hint="name"
+            android:background="@drawable/edittext_bg"
+            android:paddingRight="15dp"
+            android:hint="Name"
+            android:drawableRight="@drawable/name_icon"
+            android:paddingStart="15dp"
             android:textColor="@color/black"
-            android:textColorHint="@color/black"
+            android:textColorHint="@color/grey"
             app:layout_constraintBottom_toTopOf="@+id/guide4"
             app:layout_constraintEnd_toStartOf="@+id/guide2"
             app:layout_constraintStart_toStartOf="@+id/guide1"
@@ -138,9 +142,13 @@
             android:id="@+id/emailR"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:hint="email"
+            android:background="@drawable/edittext_bg"
+            android:hint="Email"
+            android:drawableRight="@drawable/mail_icon"
+            android:paddingRight="15dp"
+            android:paddingStart="15dp"
             android:textColor="@color/black"
-            android:textColorHint="@color/black"
+            android:textColorHint="@color/grey"
             app:layout_constraintBottom_toTopOf="@+id/guide6"
             app:layout_constraintEnd_toStartOf="@+id/guide2"
             app:layout_constraintStart_toStartOf="@+id/guide1"
@@ -149,9 +157,13 @@
             android:id="@+id/phoneR"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:hint="phone number"
+            android:background="@drawable/edittext_bg"
+            android:hint="Phone Number"
+            android:drawableRight="@drawable/phone"
+            android:paddingRight="15dp"
+            android:paddingStart="15dp"
             android:textColor="@color/black"
-            android:textColorHint="@color/black"
+            android:textColorHint="@color/grey"
             app:layout_constraintBottom_toTopOf="@+id/guide8"
             app:layout_constraintEnd_toStartOf="@+id/guide2"
             app:layout_constraintStart_toStartOf="@+id/guide1"
@@ -171,11 +183,13 @@
                 android:id="@+id/btn1"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
+                android:buttonTint="@color/blue"
                 android:text="Student" />
             <RadioButton
                 android:id="@+id/btn2"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
+                android:buttonTint="@color/blue"
                 android:text="Teacher"/>
         </RadioGroup>
 
@@ -183,9 +197,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Student"
+            android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/guide11"
             app:layout_constraintEnd_toStartOf="@+id/guide2"
-            app:layout_constraintHorizontal_bias="0.056"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/guide9"
             app:layout_constraintTop_toTopOf="@+id/guide10"
             app:layout_constraintVertical_bias="0.185"
@@ -195,9 +210,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Teacher"
+            android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/guide11"
             app:layout_constraintEnd_toStartOf="@+id/guide2"
-            app:layout_constraintHorizontal_bias="0.057"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/guide9"
             app:layout_constraintTop_toTopOf="@+id/guide10"
             app:layout_constraintVertical_bias="0.814"
@@ -231,20 +247,20 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                app:layout_constraintGuide_percent="0.37"/>
+                app:layout_constraintGuide_percent="0.45"/>
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/s4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                app:layout_constraintGuide_percent="0.8"/>
+                app:layout_constraintGuide_percent="0.80"/>
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/s5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                app:layout_constraintGuide_percent="0.82"/>
+                app:layout_constraintGuide_percent="0.85"/>
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/s6"
                 android:layout_width="wrap_content"
@@ -269,8 +285,13 @@
                 android:id="@+id/enrollment"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
+                android:background="@drawable/edittext_bg"
                 android:hint="Enrollment no."
-                android:textColorHint="@color/black"
+                android:drawableRight="@drawable/id_icon"
+                android:paddingRight="15dp"
+                android:paddingStart="15dp"
+                android:textColorHint="@color/grey"
+                android:textColor="@color/black"
                 app:layout_constraintBottom_toTopOf="@+id/s2"
                 app:layout_constraintEnd_toStartOf="@+id/sside2"
                 app:layout_constraintStart_toStartOf="@+id/sside1"
@@ -280,8 +301,13 @@
                 android:id="@+id/club"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
+                android:background="@drawable/edittext_bg"
                 android:hint="Club"
-                android:textColorHint="@color/black"
+                android:drawableRight="@drawable/club"
+                android:paddingRight="15dp"
+                android:paddingStart="15dp"
+                android:textColorHint="@color/grey"
+                android:textColor="@color/black"
                 app:layout_constraintBottom_toTopOf="@+id/s4"
                 app:layout_constraintEnd_toStartOf="@+id/sside2"
                 app:layout_constraintStart_toStartOf="@+id/sside1"
@@ -292,6 +318,7 @@
                 android:id="@+id/clubHead"
                 android:layout_width="20dp"
                 android:layout_height="0dp"
+                android:buttonTint="@color/blue"
                 app:layout_constraintBottom_toTopOf="@+id/s6"
                 app:layout_constraintEnd_toStartOf="@+id/sside2"
                 app:layout_constraintHorizontal_bias="0.038"
@@ -299,14 +326,33 @@
                 app:layout_constraintTop_toTopOf="@+id/s5"
                 app:layout_constraintVertical_bias="1.0" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Club Head"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toTopOf="@+id/s6"
+                app:layout_constraintEnd_toStartOf="@+id/sside2"
+                app:layout_constraintHorizontal_bias="0.13"
+                app:layout_constraintStart_toStartOf="@id/clubHead"/>
+
+
+
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <EditText
             android:id="@+id/teacherid"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:background="@drawable/edittext_bg"
             android:hint="Teacher id"
-            android:textColorHint="@color/black"
+            android:drawableRight="@drawable/id_icon"
+            android:paddingRight="15dp"
+            android:paddingStart="15dp"
+            android:textColorHint="@color/grey"
+            android:textColor="@color/black"
             app:layout_constraintBottom_toTopOf="@+id/guide13"
             app:layout_constraintEnd_toStartOf="@+id/guide2"
             app:layout_constraintStart_toStartOf="@+id/guide1"
@@ -328,42 +374,42 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                app:layout_constraintGuide_percent="0"
+                app:layout_constraintGuide_percent="0.05"
                 />
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guide17"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                app:layout_constraintGuide_percent="0.3"
+                app:layout_constraintGuide_percent="0.25"
                 />
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guide18"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                app:layout_constraintGuide_percent="0.33"
+                app:layout_constraintGuide_percent="0.30"
                 />
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guide19"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                app:layout_constraintGuide_percent="0.63"
+                app:layout_constraintGuide_percent="0.50"
                 />
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guide20"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                app:layout_constraintGuide_percent="0.65"
+                app:layout_constraintGuide_percent="0.55"
                 />
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guide21"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                app:layout_constraintGuide_percent="0.88"
+                app:layout_constraintGuide_percent="0.78"
                 />
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/side1"
@@ -383,8 +429,13 @@
                 android:id="@+id/password"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
+                android:background="@drawable/edittext_bg"
                 android:hint="Password"
-                android:textColorHint="@color/black"
+                android:drawableRight="@drawable/password_icon"
+                android:paddingRight="15dp"
+                android:paddingStart="15dp"
+                android:textColorHint="@color/grey"
+                android:textColor="@color/black"
                 app:layout_constraintBottom_toTopOf="@+id/guide17"
                 app:layout_constraintEnd_toStartOf="@+id/side2"
                 app:layout_constraintStart_toStartOf="@+id/side1"
@@ -393,8 +444,13 @@
                 android:id="@+id/confirmPass"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
+                android:background="@drawable/edittext_bg"
                 android:hint="Confirm Password"
-                android:textColorHint="@color/black"
+                android:drawableRight="@drawable/password_icon"
+                android:paddingRight="15dp"
+                android:paddingStart="15dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey"
                 app:layout_constraintBottom_toTopOf="@+id/guide19"
                 app:layout_constraintEnd_toStartOf="@+id/side2"
                 app:layout_constraintStart_toStartOf="@+id/side1"

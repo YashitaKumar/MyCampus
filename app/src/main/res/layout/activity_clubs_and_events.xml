@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".ClubsAndEventsActivity">
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guide1"
         android:layout_width="wrap_content"
@@ -16,21 +16,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.25"/>
+        app:layout_constraintGuide_percent="0.16"/>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guide11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.1"/>
+        app:layout_constraintGuide_percent="0.05"/>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guide12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.2"/>
+        app:layout_constraintGuide_percent="0.15"/>
 
 
     <ImageView
@@ -45,9 +45,10 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/userName"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="MyCampus"
+        android:text="UserName"
         android:textSize="50dp"
         android:textStyle="bold"
         android:gravity="center"
@@ -84,13 +85,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.25"/>
+            app:layout_constraintGuide_percent="0.2"/>
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guide6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.75"/>
+            app:layout_constraintGuide_percent="0.8"/>
 
         <FrameLayout
             android:id="@+id/frameLayout"
@@ -120,6 +121,11 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center" />
             </LinearLayout>
 
             <LinearLayout
@@ -129,22 +135,32 @@
 
 
                 <TextView
-                    android:id="@+id/login"
+                    android:id="@+id/clubs"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="Login"
+                    android:text="Clubs"
                     android:textColor="@color/black"
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/register"
+                    android:id="@+id/today"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="Register"
+                    android:text="Today"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/upcoming"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Upcoming"
                     android:textColor="@color/black"
                     android:textStyle="bold" />
             </LinearLayout>

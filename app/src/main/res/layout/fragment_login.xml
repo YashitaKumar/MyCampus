@@ -38,58 +38,62 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.12"
+            app:layout_constraintGuide_percent="0.14"
             />
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guide5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.15"
+            app:layout_constraintGuide_percent="0.17"
             />
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guide6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.22"
+            app:layout_constraintGuide_percent="0.26"
             />
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guide7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.4"
+            app:layout_constraintGuide_percent="0.46"
             />
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guide8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.47"
+            app:layout_constraintGuide_percent="0.49"
             />
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guide9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.25"
+            app:layout_constraintGuide_percent="0.29"
             />
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guide10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.32"
+            app:layout_constraintGuide_percent="0.38"
             />
 
         <EditText
             android:id="@+id/emailL"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:hint="email"
+            android:hint="Email"
+            android:drawableRight="@drawable/mail_icon"
+            android:drawableTint="@color/grey"
+            android:padding="15dp"
+            android:background="@drawable/edittext_bg"
             android:textColor="@color/black"
-            android:textColorHint="@color/black"
+            android:textColorHint="@color/grey"
             app:layout_constraintBottom_toTopOf="@+id/guide4"
             app:layout_constraintEnd_toStartOf="@+id/guide2"
             app:layout_constraintStart_toStartOf="@+id/guide1"
@@ -99,21 +103,28 @@
             android:id="@+id/passwordL"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:hint="password"
+            android:hint="Password"
+            android:drawableRight="@drawable/password_icon"
+            android:padding="15dp"
+            android:background="@drawable/edittext_bg"
             android:textColor="@color/black"
-            android:textColorHint="@color/black"
+            android:textColorHint="@color/grey"
             app:layout_constraintBottom_toTopOf="@+id/guide6"
             app:layout_constraintEnd_toStartOf="@+id/guide2"
             app:layout_constraintStart_toStartOf="@+id/guide1"
-            app:layout_constraintTop_toTopOf="@+id/guide5" />
+            app:layout_constraintTop_toTopOf="@+id/guide5"
+            android:inputType="textPassword"/>
 
         <EditText
             android:id="@+id/idVal"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:hint="ID no."
+            android:hint="ID number"
+            android:drawableRight="@drawable/id_icon"
+            android:padding="15dp"
+            android:background="@drawable/edittext_bg"
             android:textColor="@color/black"
-            android:textColorHint="@color/black"
+            android:textColorHint="@color/grey"
             app:layout_constraintBottom_toTopOf="@+id/guide10"
             app:layout_constraintEnd_toStartOf="@+id/guide2"
             app:layout_constraintStart_toStartOf="@+id/guide1"
@@ -122,13 +133,14 @@
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/loginBtn"
             android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_height="60dp"
             app:layout_constraintBottom_toTopOf="@+id/guide8"
             app:layout_constraintEnd_toStartOf="@+id/guide2"
             app:layout_constraintStart_toStartOf="@+id/guide1"
             app:layout_constraintTop_toTopOf="@+id/guide7"
             android:background="@drawable/button_bg"
-            android:text="Login"/>
+            android:text="LOGIN"
+            android:textColor="@color/black"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

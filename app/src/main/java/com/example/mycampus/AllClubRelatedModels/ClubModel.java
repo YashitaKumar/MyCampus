@@ -7,6 +7,13 @@ public class ClubModel {
     String descp;
     String clubPic;
 
+    public ClubModel(String name, String descp, String clubPic, List<HeadsModels> headsModelsList) {
+        this.name = name;
+        this.descp = descp;
+        this.clubPic = clubPic;
+        this.headsModelsList = headsModelsList;
+    }
+
     public String getShortdescp() {
         return shortdescp;
     }
@@ -53,10 +60,10 @@ public class ClubModel {
     public ClubModel() {
     }
 
-    public ClubModel(String name, String descp, String clubPic, List<HeadsModels> headsModelsList) {
+    public ClubModel(String name, String clubPic, String shortdescp) {
         this.name = name;
-        this.descp = descp;
         this.clubPic = clubPic;
-        this.headsModelsList = headsModelsList;
+        this.shortdescp = shortdescp;
     }
+
 }
