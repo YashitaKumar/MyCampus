@@ -87,6 +87,7 @@ public class ClubMainActivity extends AppCompatActivity {
         list = new ArrayList<>();
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         ClubMainAdapter clubMainAdapter = new ClubMainAdapter();
+        clubMainAdapter.setContext(ClubMainActivity.this);
         recyclerView.setAdapter(clubMainAdapter);
 
 

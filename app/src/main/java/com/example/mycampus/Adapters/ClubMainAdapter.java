@@ -63,6 +63,7 @@ public class ClubMainAdapter extends RecyclerView.Adapter<ClubMainAdapter.MyView
             eventShortAdapter.setList(pastEvents);
             eventShortAdapter.setPast(true);
             eventShortAdapter.setToday(false);
+            eventShortAdapter.setContext(context);
             holder.past.setAdapter(eventShortAdapter);
             eventShortAdapter.notifyDataSetChanged();
         }

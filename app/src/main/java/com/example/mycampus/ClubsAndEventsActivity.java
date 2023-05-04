@@ -35,7 +35,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ClubsAndEventsActivity extends AppCompatActivity implements View.OnClickListener {
-    TextView clubs,today,upcoming,selected;
+    TextView clubs,today,upcoming,selected,user;
     FrameLayout frameLayout;
     MainActivity.SwipeListener swipeListener;
     FloatingActionButton createEvent;
@@ -43,6 +43,7 @@ public class ClubsAndEventsActivity extends AppCompatActivity implements View.On
     AlertDialog dialog;
     String eventClub;
     long pos=0;
+    String userName;
 
 
 
@@ -61,9 +62,13 @@ public class ClubsAndEventsActivity extends AppCompatActivity implements View.On
         selected=findViewById(R.id.select);
         frameLayout=findViewById(R.id.fragment_container);
         createEvent = findViewById(R.id.CreateEvent);
+        user=findViewById(R.id.userName);
 
         //From intent
         id=getIntent().getStringExtra("id");
+        user.setText(getIntent().getStringExtra("name"));
+
+
 
         //Event Creation
         //User authentication
@@ -77,6 +82,8 @@ public class ClubsAndEventsActivity extends AppCompatActivity implements View.On
                     pos=snapshot.child("Events").getChildrenCount()+1;
 
                 }
+
+
             }
 
             @Override
@@ -84,6 +91,7 @@ public class ClubsAndEventsActivity extends AppCompatActivity implements View.On
 
             }
         });
+
 
 
 

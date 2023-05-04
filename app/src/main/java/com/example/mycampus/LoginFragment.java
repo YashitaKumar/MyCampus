@@ -129,7 +129,9 @@ public class LoginFragment extends Fragment implements View.OnClickListener{
                                     if(snapshot.child("Students").hasChild(idVal))
                                     {
                                         Intent intent = new Intent(getActivity(),ClubsAndEventsActivity.class);
+                                        String name = snapshot.child("Students").child(idVal).child("name").getValue().toString();
                                         intent.putExtra("id",idVal);
+                                        intent.putExtra("name",name);
                                         startActivity(intent);
                                     }
                                     else if(snapshot.child("Teachers").hasChild(idVal))
