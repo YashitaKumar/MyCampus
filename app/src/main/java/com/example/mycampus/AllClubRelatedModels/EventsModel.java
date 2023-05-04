@@ -4,6 +4,18 @@ public class EventsModel {
     String eventName,eventClub,eventTime,eventDate,eventPic,eventVenue,descp;
     int eventLikes,eventDuration;
 
+    public EventsModel(String eventName, String eventClub, String eventTime, String eventDate, String eventPic, String eventVenue, String descp, int eventLikes, int eventDuration) {
+        this.eventName = eventName;
+        this.eventClub = eventClub;
+        this.eventTime = eventTime;
+        this.eventDate = eventDate;
+        this.eventPic = eventPic;
+        this.eventVenue = eventVenue;
+        this.descp = descp;
+        this.eventLikes = eventLikes;
+        this.eventDuration = eventDuration;
+    }
+
     public EventsModel(String eventName, String eventClub, String eventTime, String eventDate, String eventPic, String eventVenue, String descp, int eventLikes) {
         this.eventName = eventName;
         this.eventClub = eventClub;

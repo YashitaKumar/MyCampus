@@ -1,5 +1,6 @@
 package com.example.mycampus.Adapters;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,6 +21,11 @@ import java.util.List;
 
 public class ClubMainAdapter extends RecyclerView.Adapter<ClubMainAdapter.MyViewHolder> {
     private List<ClubModel> list;
+    Context context;
+
+    public void setContext(Context context) {
+        this.context = context;
+    }
 
     public List<ClubModel> getList() {
         return list;
@@ -56,6 +62,7 @@ public class ClubMainAdapter extends RecyclerView.Adapter<ClubMainAdapter.MyView
             EventShortAdapter eventShortAdapter = new EventShortAdapter();
             eventShortAdapter.setList(pastEvents);
             eventShortAdapter.setPast(true);
+            eventShortAdapter.setToday(false);
             holder.past.setAdapter(eventShortAdapter);
             eventShortAdapter.notifyDataSetChanged();
         }

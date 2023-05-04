@@ -30,7 +30,7 @@ public class EventShortAdapter extends RecyclerView.Adapter<EventShortAdapter.My
     List<EventsModel> list;
     Boolean today = false;
     Boolean past = false;
-    Context context;
+    Context context ;
 
     public void setPast(Boolean past) {
         this.past = past;
@@ -122,7 +122,7 @@ public class EventShortAdapter extends RecyclerView.Adapter<EventShortAdapter.My
                     holder.finish.setVisibility(View.INVISIBLE);
                     Log.d("Event Status","Live");
                 }
-                else
+                else if(currT>=endT)
                 {
                     holder.live.setVisibility(View.INVISIBLE);
                     holder.btn.setVisibility(View.INVISIBLE);
