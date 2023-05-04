@@ -167,7 +167,7 @@
         app:layout_constraintTop_toTopOf="@id/guide1" >
 
         <ImageView
-            android:id="@+id/clubMainPic"
+            android:id="@+id/eventMainPic"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="fitXY"
@@ -176,11 +176,11 @@
     </androidx.cardview.widget.CardView>
 
     <TextView
-        android:id="@+id/clubName"
+        android:id="@+id/event_Name"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:fontFamily="sans-serif-black"
-        android:text="Club Name"
+        android:text="Event Name"
         android:gravity="center"
         android:textAllCaps="true"
         android:textColor="@color/white"
@@ -304,16 +304,21 @@
         app:layout_constraintTop_toTopOf="@id/guide16" />
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/Likke"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/interested_bg"
         android:text="Interested?"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:textAllCaps="false"
         android:textColor="@color/red"
-        android:textSize="10dp"
+        android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="@id/guide17"
         app:layout_constraintEnd_toEndOf="@id/guide4"
         app:layout_constraintStart_toStartOf="@id/guide18"
         app:layout_constraintTop_toTopOf="@id/guide16"
+        android:visibility="visible"
        />
 
     <androidx.appcompat.widget.AppCompatButton
@@ -326,6 +331,38 @@
         app:layout_constraintTop_toTopOf="@+id/guide19"
         android:background="@drawable/button_bg"
         android:text="Register" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/Finished_Btn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/finished_bg"
+        android:text="Finished"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="@id/guide17"
+        app:layout_constraintEnd_toEndOf="@id/guide4"
+        app:layout_constraintStart_toStartOf="@id/guide18"
+        app:layout_constraintTop_toTopOf="@id/guide16"
+        android:visibility="invisible"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/Live_Btn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/ongoing_bg"
+        android:text="OnGoing"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="@id/guide17"
+        app:layout_constraintEnd_toEndOf="@id/guide4"
+        app:layout_constraintStart_toStartOf="@id/guide18"
+        app:layout_constraintTop_toTopOf="@id/guide16"
+        android:visibility="invisible"/>
 
 
 

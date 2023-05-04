@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 import com.example.mycampus.Adapters.ClubShortAdapter;
 import com.example.mycampus.Adapters.DhabbaAdapter;
 import com.example.mycampus.AllClubRelatedModels.ClubModel;
+import com.example.mycampus.AllClubRelatedModels.EventsModel;
 import com.example.mycampus.Models.DhabbaItemModel;
 import com.example.mycampus.Models.DhabbaModel;
 import com.google.firebase.database.DataSnapshot;
@@ -23,7 +24,10 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.GenericTypeIndicator;
 import com.google.firebase.database.ValueEventListener;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -33,6 +37,7 @@ import java.util.List;
  */
 public class ClubsFragment extends Fragment {
     List<ClubModel> list;
+    List<EventsModel> eventsModelList;
     RecyclerView recyclerView;
 
     // TODO: Rename parameter arguments, choose names that match
@@ -84,6 +89,7 @@ public class ClubsFragment extends Fragment {
 
         //Views on page
         recyclerView= mainView.findViewById(R.id.AllClubs);
+
 
         list = new ArrayList<>();
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));

@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.mycampus.AllClubRelatedModels.ClubModel;
+import com.example.mycampus.AllClubRelatedModels.EventsModel;
 import com.example.mycampus.Models.DhabbaModel;
 import com.example.mycampus.R;
 
@@ -49,6 +50,18 @@ public class ClubMainAdapter extends RecyclerView.Adapter<ClubMainAdapter.MyView
         holder.recyclerView.setAdapter(clubMainHeadsAdapter);
         clubMainHeadsAdapter.notifyDataSetChanged();
 
+        List<EventsModel> pastEvents = clubModel.getEventsModelList();
+        if(!pastEvents.isEmpty()) {
+            holder.past.setLayoutManager(new LinearLayoutManager(holder.itemView.getContext()));
+            EventShortAdapter eventShortAdapter = new EventShortAdapter();
+            eventShortAdapter.setList(pastEvents);
+            eventShortAdapter.setPast(true);
+            holder.past.setAdapter(eventShortAdapter);
+            eventShortAdapter.notifyDataSetChanged();
+        }
+
+
+
     }
 
     @Override
@@ -65,7 +78,7 @@ public class ClubMainAdapter extends RecyclerView.Adapter<ClubMainAdapter.MyView
     class MyViewHolder extends RecyclerView.ViewHolder {
         TextView clubName,descp;
         ImageView clubPic;
-        RecyclerView recyclerView;
+        RecyclerView recyclerView, past;
 
 
         public MyViewHolder(@NonNull View itemView) {
@@ -74,6 +87,7 @@ public class ClubMainAdapter extends RecyclerView.Adapter<ClubMainAdapter.MyView
             descp = itemView.findViewById(R.id.descp);
             recyclerView = itemView.findViewById(R.id.heads);
             clubPic = itemView.findViewById(R.id.clubMainPic);
+            past = itemView.findViewById(R.id.past);
         }
     }
 }

@@ -24,6 +24,15 @@ public class ClubModel {
 
     String shortdescp;
     List<HeadsModels> headsModelsList;
+    List<EventsModel> eventsModelList;
+
+    public List<EventsModel> getEventsModelList() {
+        return eventsModelList;
+    }
+
+    public void setEventsModelList(List<EventsModel> eventsModelList) {
+        this.eventsModelList = eventsModelList;
+    }
 
     public String getName() {
         return name;
