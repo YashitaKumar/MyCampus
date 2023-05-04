@@ -13,10 +13,10 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.mycampus.Adapters.ClubShortAdapter;
-import com.example.mycampus.Adapters.DhabbaAdapter;
+import com.example.mycampus.Adapters.EventShortAdapter;
 import com.example.mycampus.AllClubRelatedModels.ClubModel;
+import com.example.mycampus.AllClubRelatedModels.EventsModel;
 import com.example.mycampus.Models.DhabbaItemModel;
-import com.example.mycampus.Models.DhabbaModel;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
@@ -28,12 +28,12 @@ import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link ClubsFragment#newInstance} factory method to
+ * Use the {@link UpcomingEventsFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ClubsFragment extends Fragment {
-    List<ClubModel> list;
+public class UpcomingEventsFragment extends Fragment {
     RecyclerView recyclerView;
+    List<EventsModel> list;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -44,7 +44,7 @@ public class ClubsFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public ClubsFragment() {
+    public UpcomingEventsFragment() {
         // Required empty public constructor
     }
 
@@ -54,11 +54,11 @@ public class ClubsFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment ClubsFragment.
+     * @return A new instance of fragment UpcomingEventsFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static ClubsFragment newInstance(String param1, String param2) {
-        ClubsFragment fragment = new ClubsFragment();
+    public static UpcomingEventsFragment newInstance(String param1, String param2) {
+        UpcomingEventsFragment fragment = new UpcomingEventsFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -80,31 +80,33 @@ public class ClubsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View mainView=inflater.inflate(R.layout.fragment_clubs, container, false);
+        View mainView= inflater.inflate(R.layout.fragment_upcoming_events, container, false);
 
-        //Views on page
-        recyclerView= mainView.findViewById(R.id.AllClubs);
+        recyclerView = mainView.findViewById(R.id.AllUpcomingEvents);
 
         list = new ArrayList<>();
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        ClubShortAdapter clubShortAdapter = new ClubShortAdapter();
-        recyclerView.setAdapter(clubShortAdapter);
-        clubShortAdapter.setContext(getActivity());
+        EventShortAdapter eventShortAdapter = new EventShortAdapter();
+        recyclerView.setAdapter(eventShortAdapter);
 
-
-        FirebaseDatabase.getInstance().getReference("/Clubs").addListenerForSingleValueEvent(new ValueEventListener() {
+        FirebaseDatabase.getInstance().getReference("/Events").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for(DataSnapshot data: snapshot.getChildren())
                 {
-                    String clubName= data.child("name").getValue().toString();
-                    String shortDescp=data.child("shortdescp").getValue().toString();
-                    String clubPic = data.child("clubPic").getValue().toString();
-                    ClubModel clubModel = new ClubModel(clubName,clubPic,shortDescp);
-                    list.add(clubModel);
+                    String eventClub= data.child("eventClub").getValue().toString();
+                    String eventDate= data.child("eventDate").getValue().toString();
+                    String Likes=data.child("eventLikes").getValue().toString();
+                    int eventLikes = Integer.parseInt(Likes);
+                    String eventName= data.child("eventName").getValue().toString();
+                    String eventPic=data.child("eventPic").getValue().toString();
+                    String eventTime = data.child("eventTime").getValue().toString();
+                    String eventVenue = data.child("eventVenue").getValue().toString();
+                    EventsModel eventsModel = new EventsModel(eventName,eventClub,eventTime,eventDate,eventPic,eventVenue,eventLikes);
+                    list.add(eventsModel);
                 }
-                clubShortAdapter.setClubModelList(list);
-                clubShortAdapter.notifyDataSetChanged();
+                eventShortAdapter.setList(list);
+                eventShortAdapter.notifyDataSetChanged();
             }
 
             @Override
@@ -112,6 +114,10 @@ public class ClubsFragment extends Fragment {
 
             }
         });
+
+
+
+
 
         return mainView;
     }

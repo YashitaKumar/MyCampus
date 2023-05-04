@@ -51,8 +51,12 @@ public class ClubsAndEventsActivity extends AppCompatActivity implements View.On
             case R.id.clubs:selected.animate().x(0).setDuration(100);
                             replaceFrgament(new ClubsFragment());
                             break;
-            case R.id.today:
-            case R.id.upcoming:
+            case R.id.today: break;
+            case R.id.upcoming: int size2 =clubs.getWidth();
+                                int size1=today.getWidth();
+                                selected.animate().x((size2+size1)).setDuration(100);
+                                replaceFrgament(new UpcomingEventsFragment());
+                                break;
         }
     }
 }
