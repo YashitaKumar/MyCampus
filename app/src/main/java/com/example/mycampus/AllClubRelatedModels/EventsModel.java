@@ -1,8 +1,35 @@
 package com.example.mycampus.AllClubRelatedModels;
 
 public class EventsModel {
-    String eventName,eventClub,eventTime,eventDate,eventPic,eventVenue;
-    int eventLikes;
+    String eventName,eventClub,eventTime,eventDate,eventPic,eventVenue,descp;
+    int eventLikes,eventDuration;
+
+    public EventsModel(String eventName, String eventClub, String eventTime, String eventDate, String eventPic, String eventVenue, String descp, int eventLikes) {
+        this.eventName = eventName;
+        this.eventClub = eventClub;
+        this.eventTime = eventTime;
+        this.eventDate = eventDate;
+        this.eventPic = eventPic;
+        this.eventVenue = eventVenue;
+        this.descp = descp;
+        this.eventLikes = eventLikes;
+    }
+
+    public String getDescp() {
+        return descp;
+    }
+
+    public void setDescp(String descp) {
+        this.descp = descp;
+    }
+
+    public int getEventDuration() {
+        return eventDuration;
+    }
+
+    public void setEventDuration(int eventDuration) {
+        this.eventDuration = eventDuration;
+    }
 
     public String getEventName() {
         return eventName;
