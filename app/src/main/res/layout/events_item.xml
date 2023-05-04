@@ -2,150 +2,411 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:layout_marginTop="10dp">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.03"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.97"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.0"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="1"/>
+
+
 
     <androidx.cardview.widget.CardView
-        android:layout_width="350dp"
+        android:background="@color/white"
+        android:layout_width="0dp"
         android:layout_height="200dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:cardCornerRadius="30dp">
+        app:layout_constraintBottom_toBottomOf="@id/guide4"
+        app:layout_constraintEnd_toEndOf="@id/guide2"
+        app:layout_constraintStart_toStartOf="@id/guide1"
+        app:layout_constraintTop_toTopOf="@id/guide3"
+        app:cardCornerRadius="30dp"
+        android:elevation="8dp">
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guide5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.15"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guide6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.76"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guide7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.04"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guide8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.34"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guide9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.38"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guide10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.95"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guide11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.25"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guide12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.35"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guide13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.38"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guide14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.48"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guide15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.51"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guide16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.61"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guide17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.64"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guide18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.74"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guide19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.45"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guide20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.64"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guide21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.98"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guide22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.84"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guide23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="1"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guide24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.6"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guide25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="1"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guide26"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.04"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guide27"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.22"/>
+
+
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:src="@drawable/calender"
+                android:tint="@color/black"
+                app:layout_constraintBottom_toBottomOf="@id/guide12"
+                app:layout_constraintEnd_toEndOf="@id/guide19"
+                app:layout_constraintStart_toStartOf="@id/guide9"
+                app:layout_constraintTop_toTopOf="@id/guide11"/>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:src="@drawable/clock"
+                app:tint="@color/black"
+                app:layout_constraintBottom_toBottomOf="@id/guide14"
+                app:layout_constraintEnd_toEndOf="@id/guide19"
+                app:layout_constraintStart_toStartOf="@id/guide9"
+                app:layout_constraintTop_toTopOf="@id/guide13"/>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:src="@drawable/location"
+                app:tint="@color/black"
+                app:layout_constraintBottom_toBottomOf="@id/guide16"
+                app:layout_constraintEnd_toEndOf="@id/guide19"
+                app:layout_constraintStart_toStartOf="@id/guide9"
+                app:layout_constraintTop_toTopOf="@id/guide15"/>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:src="@drawable/like"
+                app:tint="@color/black"
+                app:layout_constraintBottom_toBottomOf="@id/guide18"
+                app:layout_constraintEnd_toEndOf="@id/guide19"
+                app:layout_constraintStart_toStartOf="@id/guide9"
+                app:layout_constraintTop_toTopOf="@id/guide17"/>
 
             <TextView
                 android:id="@+id/eventName"
-                android:layout_width="200dp"
-                android:layout_height="30dp"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
                 android:background="@drawable/button_bg"
                 android:gravity="center"
+                android:fontFamily="sans-serif-black"
                 android:text="Event Name"
                 android:textColor="@color/black"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.893"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.029" />
+                app:layout_constraintBottom_toBottomOf="@id/guide27"
+                app:layout_constraintEnd_toEndOf="@id/guide10"
+                app:layout_constraintStart_toStartOf="@id/guide19"
+                app:layout_constraintTop_toTopOf="@id/guide26" />
 
             <TextView
                 android:id="@+id/eventDate"
-                android:layout_width="150dp"
-                android:layout_height="25dp"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center_vertical"
+                android:fontFamily="sans-serif-black"
+                android:textSize="16dp"
                 android:text="Date"
                 android:paddingLeft="5dp"
-                android:drawablePadding="10dp"
-                android:gravity="center_vertical"
-                android:drawableLeft="@drawable/calender"
                 android:textColor="@color/black"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.6"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.25" />
+                app:layout_constraintBottom_toBottomOf="@id/guide12"
+                app:layout_constraintEnd_toEndOf="@id/guide10"
+                app:layout_constraintStart_toStartOf="@id/guide19"
+                app:layout_constraintTop_toTopOf="@id/guide11" />
 
             <TextView
                 android:id="@+id/eventTime"
-                android:layout_width="150dp"
-                android:layout_height="25dp"
-                android:drawableLeft="@drawable/clock"
-                android:drawablePadding="10dp"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center_vertical"
+                android:fontFamily="sans-serif-black"
+                android:textSize="16dp"
                 android:text="Time"
                 android:paddingLeft="5dp"
-                android:gravity="center_vertical"
                 android:textColor="@color/black"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.6"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/eventDate"
-                app:layout_constraintVertical_bias="0.05" />
+                app:layout_constraintBottom_toBottomOf="@id/guide14"
+                app:layout_constraintEnd_toEndOf="@id/guide10"
+                app:layout_constraintStart_toStartOf="@id/guide19"
+                app:layout_constraintTop_toTopOf="@id/guide13" />
 
             <TextView
                 android:id="@+id/eventVenu"
-                android:layout_width="150dp"
-                android:layout_height="25dp"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
                 android:gravity="center_vertical"
-                android:drawablePadding="10dp"
+                android:fontFamily="sans-serif-black"
+                android:textSize="16dp"
                 android:text="Location"
                 android:paddingLeft="5dp"
-                android:drawableLeft="@drawable/location"
                 android:textColor="@color/black"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.6"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/eventTime"
-                app:layout_constraintVertical_bias="0.05" />
+                app:layout_constraintBottom_toBottomOf="@id/guide16"
+                app:layout_constraintEnd_toEndOf="@id/guide10"
+                app:layout_constraintStart_toStartOf="@id/guide19"
+                app:layout_constraintTop_toTopOf="@id/guide15" />
 
             <TextView
                 android:id="@+id/eventLikes"
-                android:layout_width="100dp"
-                android:layout_height="25dp"
-                android:drawableLeft="@drawable/like"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
                 android:gravity="center_vertical"
+                android:fontFamily="sans-serif-black"
+                android:textSize="16dp"
                 android:paddingLeft="5dp"
-                android:drawablePadding="10dp"
                 android:text="Likes"
                 android:textColor="@color/black"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.48"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/eventVenu"
-                app:layout_constraintVertical_bias="0.1" />
+                app:layout_constraintBottom_toBottomOf="@id/guide18"
+                app:layout_constraintEnd_toEndOf="@id/guide10"
+                app:layout_constraintStart_toStartOf="@id/guide19"
+                app:layout_constraintTop_toTopOf="@id/guide17" />
 
             <ImageView
                 android:id="@+id/eventPic"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:scaleType="fitXY"
                 android:src="@drawable/dance"
-                android:scaleType=  "fitXY"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.025"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.353" />
+                app:layout_constraintBottom_toBottomOf="@id/guide6"
+                app:layout_constraintEnd_toEndOf="@id/guide8"
+                app:layout_constraintStart_toStartOf="@id/guide7"
+                app:layout_constraintTop_toTopOf="@id/guide5" />
 
             <TextView
                 android:id="@+id/eventClub"
-                android:layout_width="100dp"
-                android:layout_height="30dp"
-                android:text="Club "
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="Club"
+                android:textSize="15dp"
                 android:gravity="center"
+                android:fontFamily="sans-serif-black"
                 android:textColor="@color/black"
-                android:textStyle="bold"
                 android:background="@drawable/club_name_bg"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="1" />
+                app:layout_constraintBottom_toBottomOf="@id/guide23"
+                app:layout_constraintEnd_toEndOf="@id/guide25"
+                app:layout_constraintStart_toStartOf="@id/guide24"
+                app:layout_constraintTop_toTopOf="@id/guide22" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/likeBtn"
-                android:layout_width="110dp"
-                android:layout_height="25dp"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
                 android:background="@drawable/interested_bg"
                 android:text="Interested?"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:textAllCaps="false"
                 android:textColor="@color/red"
-                android:textSize="8dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.65"
-                app:layout_constraintStart_toEndOf="@+id/eventLikes"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.76" />
+                android:textSize="15dp"
+                app:layout_constraintBottom_toBottomOf="@id/guide6"
+                app:layout_constraintEnd_toEndOf="@id/guide21"
+                app:layout_constraintStart_toStartOf="@id/guide20"
+                app:layout_constraintTop_toTopOf="@id/guide17"
+                android:visibility="visible"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/LiveBtn"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/ongoing_bg"
+                android:text="OnGoing"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                app:layout_constraintBottom_toBottomOf="@id/guide6"
+                app:layout_constraintEnd_toEndOf="@id/guide21"
+                app:layout_constraintStart_toStartOf="@id/guide20"
+                app:layout_constraintTop_toTopOf="@id/guide17"
+                android:visibility="invisible"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/FinishedBtn"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/finished_bg"
+                android:text="Finished"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                app:layout_constraintBottom_toBottomOf="@id/guide6"
+                app:layout_constraintEnd_toEndOf="@id/guide21"
+                app:layout_constraintStart_toStartOf="@id/guide20"
+                app:layout_constraintTop_toTopOf="@id/guide17"
+                android:visibility="invisible"/>
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

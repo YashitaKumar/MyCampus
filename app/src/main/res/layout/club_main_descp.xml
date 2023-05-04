@@ -69,7 +69,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.16" />
+        app:layout_constraintGuide_percent="0.15" />
 
 
     <androidx.constraintlayout.widget.Guideline
@@ -92,6 +92,13 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.75"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.85" />
 
 
     <androidx.cardview.widget.CardView
@@ -119,11 +126,12 @@
         android:layout_height="0dp"
         android:fontFamily="sans-serif-black"
         android:text="Club Name"
+        android:gravity="center"
         android:textAllCaps="true"
         android:textColor="@color/white"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="@id/guide6"
-        app:layout_constraintEnd_toEndOf="@id/guide4"
+        app:layout_constraintEnd_toEndOf="@id/guide13"
         app:layout_constraintStart_toStartOf="@id/guide9"
         app:layout_constraintTop_toTopOf="@id/guide5" />
 
