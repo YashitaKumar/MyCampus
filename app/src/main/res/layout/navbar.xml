@@ -44,27 +44,97 @@
         app:layout_constraintEnd_toEndOf="@id/guide4"
         app:layout_constraintStart_toStartOf="@id/guide3">
 
+     <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guide5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.0"/>
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0"/>
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guide6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.12"/>
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.2"/>
+
 
         <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guide13"
+            android:id="@+id/guide7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.85" />
+            app:layout_constraintGuide_percent="0.4"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.6" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.8"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="1"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.1"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.9"/>
+
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/home_icon"
+            app:layout_constraintBottom_toBottomOf="@id/guide12"
+            app:layout_constraintTop_toTopOf="@id/guide11"
+            app:layout_constraintEnd_toEndOf="@id/guide8"
+            app:layout_constraintStart_toStartOf="@id/guide7" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/profile_icon"
+            app:layout_constraintBottom_toBottomOf="@id/guide12"
+            app:layout_constraintTop_toTopOf="@id/guide11"
+            app:layout_constraintEnd_toEndOf="@id/guide10"
+            app:layout_constraintStart_toStartOf="@id/guide9" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/dhabba_icon"
+            app:layout_constraintBottom_toBottomOf="@id/guide12"
+            app:layout_constraintTop_toTopOf="@id/guide11"
+            app:layout_constraintEnd_toEndOf="@id/guide6"
+            app:layout_constraintStart_toStartOf="@id/guide5" />
+
+
+     </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
 
