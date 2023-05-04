@@ -16,11 +16,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="User Name"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:textColor="@color/black"
         android:gravity="center"/>
     <TextView
         android:id="@+id/headDesg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="User designation"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:textColor="@color/black"
         android:gravity="center"/>
 </LinearLayout>

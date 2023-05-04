@@ -4,16 +4,26 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <ImageView
-        android:id="@+id/clubPic"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:src="@drawable/clubbg"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="190dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/guide9"
+        app:layout_constraintEnd_toEndOf="@id/guide8"
+        app:layout_constraintStart_toStartOf="@id/guide2"
+        app:layout_constraintTop_toTopOf="@id/guide3">
+
+        <ImageView
+            android:id="@+id/clubPic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/clubbg" />
+
+    </androidx.cardview.widget.CardView>
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guide1"
         android:layout_width="wrap_content"
@@ -31,25 +41,27 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.05"/>
+        app:layout_constraintGuide_percent="0.1"/>
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guide2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.01"/>
+        app:layout_constraintGuide_percent="0.04"/>
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guide3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.05"/>
+        app:layout_constraintGuide_percent="0.05" />
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guide4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.23"/>
+        app:layout_constraintGuide_percent="0.33" />
 
     <TextView
         android:id="@+id/clubName"
@@ -57,21 +69,25 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="Club Name"
+        android:fontFamily="sans-serif-black"
+        android:textAllCaps="true"
         android:textColor="@color/white"
         android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/guide1"
-        app:layout_constraintStart_toStartOf="@+id/guide2"
-        app:layout_constraintTop_toTopOf="@id/guide3" />
+        app:layout_constraintStart_toStartOf="@+id/guide6"
+        app:layout_constraintTop_toTopOf="@id/guide13" />
+
     <TextView
         android:id="@+id/shortdescp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="left"
-        android:text="short descp"
+        android:fontFamily="sans-serif-black"
+        android:letterSpacing="0.1"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, aliqua."
         android:textColor="@color/white"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/guide5"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/guide7"
         app:layout_constraintStart_toStartOf="@+id/guide6"
         app:layout_constraintTop_toTopOf="@id/guide4" />
 
@@ -80,13 +96,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.85"/>
+        app:layout_constraintGuide_percent="0.82" />
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guide8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.95"/>
+        app:layout_constraintGuide_percent="0.96"/>
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guide9"
         android:layout_width="wrap_content"
@@ -94,18 +110,31 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.95"/>
     <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9"/>
+
+    <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guide10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.8"/>
+        app:layout_constraintGuide_percent="0.78" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15" />
 
     <ImageView
         android:id="@+id/moreInfo"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:src="@drawable/forward"
-        app:layout_constraintBottom_toTopOf="@+id/guide9"
+        android:src="@drawable/arrow"
+        app:layout_constraintBottom_toTopOf="@+id/guide11"
         app:layout_constraintEnd_toStartOf="@+id/guide8"
         app:layout_constraintStart_toStartOf="@+id/guide7"
         app:layout_constraintTop_toTopOf="@+id/guide10" />
