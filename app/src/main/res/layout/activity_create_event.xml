@@ -1,60 +1,131 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CreateEventActivity"
-    android:orientation="vertical">
-    <EditText
-        android:id="@+id/eventName"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:hint="Event Name"/>
-    <EditText
-        android:id="@+id/eventLong"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:hint="Give a Detailed event description"/>
-    <EditText
-        android:id="@+id/eventD"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:hint="enter Date in format dd/mm/yy"/>
-    <EditText
-        android:id="@+id/eventT"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:hint="enter time in hh:mm"/>
-    <EditText
-        android:id="@+id/eventDur"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:hint="enter event duration in hours"/>
-    <EditText
-        android:id="@+id/eventL"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:hint="enter Venue"/>
-    <ImageView
-        android:id="@+id/firebaseimage"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:src="@drawable/profile_icon"/>
-    <Button
-        android:id="@+id/selectImagebtn"
+    tools:context=".CreateEventActivity">
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Select" />
-    <Button
-        android:id="@+id/uploadimagebtn"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Upload" />
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/create"
-        android:layout_width="200dp"
-        android:layout_height="50dp"
-        android:text="Submit"/>
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25"/>
 
-</LinearLayout>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2"/>
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/img"
+        app:layout_constraintBottom_toTopOf="@+id/guide1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="MyCampus"
+        android:textSize="50dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/guide12"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guide11" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guide2"
+        android:background="@drawable/background">
+
+        <EditText
+            android:id="@+id/eventName"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:hint="Event Name" />
+
+        <EditText
+            android:id="@+id/eventLong"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="Give a Detailed event description" />
+
+        <EditText
+            android:id="@+id/eventD"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="enter Date in format dd/mm/yy" />
+
+        <EditText
+            android:id="@+id/eventT"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="enter time in hh:mm" />
+
+        <EditText
+            android:id="@+id/eventDur"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="enter event duration in hours" />
+
+        <EditText
+            android:id="@+id/eventL"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="enter Venue" />
+
+        <ImageView
+            android:id="@+id/firebaseimage"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/profile_icon" />
+
+        <Button
+            android:id="@+id/selectImagebtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select" />
+
+        <Button
+            android:id="@+id/uploadimagebtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Upload" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/create"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:text="Submit" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
