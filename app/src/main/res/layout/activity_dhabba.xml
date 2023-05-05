@@ -18,21 +18,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.25"/>
+        app:layout_constraintGuide_percent="0.16"/>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guide11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.1"/>
+        app:layout_constraintGuide_percent="0.05"/>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guide12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.2"/>
+        app:layout_constraintGuide_percent="0.15"/>
 
 
     <ImageView
@@ -178,16 +178,137 @@
 
     </FrameLayout>
 
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideB1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.88"/>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/dhabbaItems"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/guideB1"
         app:layout_constraintEnd_toStartOf="@+id/guide8"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guide7"
         app:layout_constraintTop_toBottomOf="@+id/frameLayout"
         android:layout_marginTop="20dp" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideB1">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:background="@color/white"
+                android:backgroundTint="@color/white"
+                app:cardCornerRadius="20dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/nav_bg"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="5dp">
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/ggguide5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.05"/>
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/ggguide6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.25"/>
+
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/ggguide7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.4"/>
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/ggguide8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.6" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guide9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.8"/>
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guide10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="1"/>
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/ggguide11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintGuide_percent="0.1"/>
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/ggguide12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintGuide_percent="0.9"/>
+
+
+                                        <ImageView
+                                            android:id="@+id/home"
+                                            android:layout_width="0dp"
+                                            android:layout_height="0dp"
+                                            android:src="@drawable/home_icon"
+                                            app:layout_constraintBottom_toBottomOf="@id/ggguide12"
+                                            app:layout_constraintTop_toTopOf="@id/ggguide11"
+                                            app:layout_constraintEnd_toEndOf="@id/ggguide8"
+                                            app:layout_constraintStart_toStartOf="@id/ggguide7" />
+
+                    <ImageView
+                        android:id="@+id/dhabbaBtn"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:src="@drawable/dhabba_selected"
+                        app:layout_constraintBottom_toBottomOf="@id/ggguide12"
+                        app:layout_constraintTop_toTopOf="@id/ggguide11"
+                        app:layout_constraintEnd_toEndOf="@id/ggguide6"
+                        app:layout_constraintStart_toStartOf="@id/ggguide5" />
+
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

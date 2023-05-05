@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -17,6 +18,7 @@ import com.bumptech.glide.Glide;
 import com.example.mycampus.AllClubRelatedModels.EventsModel;
 import com.example.mycampus.EventsMainActivity;
 import com.example.mycampus.R;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.text.ParseException;
@@ -153,8 +155,14 @@ public class EventShortAdapter extends RecyclerView.Adapter<EventShortAdapter.My
                 String pos = String.valueOf(posi);
                 String likes = String.valueOf(curr);
                 holder.likes.setText(likes);
-                FirebaseDatabase.getInstance().getReference("/Events/"+pos+"/eventLikes").setValue(curr);
-                Log.d("Button","U clicked it");
+                FirebaseDatabase.getInstance().getReference("/Events/"+pos+"/eventLikes").setValue(curr).addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void unused) {
+                        Toast.makeText(holder.itemView.getContext(),"See you at the event",Toast.LENGTH_SHORT ).show();
+                        Log.d("Button","U clicked it");
+
+                    }
+                });
 
             }
         });

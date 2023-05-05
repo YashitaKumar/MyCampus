@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -15,6 +16,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.example.mycampus.AllClubRelatedModels.EventsModel;
 import com.example.mycampus.R;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -118,6 +121,26 @@ public class EventsMainAdapter extends RecyclerView.Adapter<EventsMainAdapter.My
             holder.btnOn.setVisibility(View.INVISIBLE);
             holder.register.setVisibility(View.INVISIBLE);
         }
+        holder.btnLike.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int curr = eventsModel.getEventLikes();
+                curr+=1;
+                int posi = holder.getAdapterPosition()+1;
+                String pos = String.valueOf(posi);
+                String likes = String.valueOf(curr);
+                holder.likes.setText(likes);
+                FirebaseDatabase.getInstance().getReference("/Events/"+pos+"/eventLikes").setValue(curr);
+                FirebaseDatabase.getInstance().getReference("/Events/"+pos+"/eventLikes").setValue(curr).addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void unused) {
+                        Toast.makeText(holder.itemView.getContext(),"See you at the event",Toast.LENGTH_SHORT ).show();
+                        Log.d("Button","U clicked it");
+
+                    }
+                });
+            }
+        });
 
 
 

@@ -7,12 +7,15 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.mycampus.Adapters.DhabbaAdapter;
 import com.example.mycampus.Models.DhabbaItemModel;
@@ -29,10 +32,12 @@ import java.util.List;
 public class DhabbaActivity extends AppCompatActivity implements View.OnClickListener {
     RecyclerView recyclerView;
     List<DhabbaModel> list;
-    TextView maggie,smoothie,selected,urban;
+    TextView maggie,smoothie,selected,urban,user;
     FrameLayout frameLayout;
     ConstraintLayout constraintLayout;
     SwipeListener swipeListener;
+    ImageView home,dhabba;
+    String name,id;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -50,6 +55,16 @@ public class DhabbaActivity extends AppCompatActivity implements View.OnClickLis
         smoothie.setOnClickListener(this);
         urban.setOnClickListener(this);
         constraintLayout=findViewById(R.id.dhabba);
+        home=findViewById(R.id.home);
+        dhabba = findViewById(R.id.dhabbaBtn);
+        home.setOnClickListener(this);
+        dhabba.setOnClickListener(this);
+
+        name=getIntent().getStringExtra("name");
+        id=getIntent().getStringExtra("id");
+
+        user=findViewById(R.id.userName);
+        user.setText(name);
 
         forMaggie();
         swipeListener= new SwipeListener(constraintLayout);
@@ -252,6 +267,14 @@ public class DhabbaActivity extends AppCompatActivity implements View.OnClickLis
                              selected.animate().x((size2+size1)).setDuration(100);
                              forUrban();
                             break;
+            case R.id.home: Intent intent = new Intent(DhabbaActivity.this,ClubsAndEventsActivity.class);
+                            intent.putExtra("id",id);
+                            intent.putExtra("name",name);
+                            startActivity(intent);
+                            break;
+            case R.id.dhabbaBtn:
+                Toast.makeText(DhabbaActivity.this,"You are already at Dhabba page",Toast.LENGTH_SHORT).show();
+                break;
         }
     }
 

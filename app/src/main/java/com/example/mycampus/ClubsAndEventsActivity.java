@@ -16,6 +16,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -44,6 +45,7 @@ public class ClubsAndEventsActivity extends AppCompatActivity implements View.On
     String eventClub;
     long pos=0;
     String userName;
+    ImageView dhabbaBtn,homeBtn;
 
 
 
@@ -63,9 +65,12 @@ public class ClubsAndEventsActivity extends AppCompatActivity implements View.On
         frameLayout=findViewById(R.id.fragment_container);
         createEvent = findViewById(R.id.CreateEvent);
         user=findViewById(R.id.userName);
+        dhabbaBtn =findViewById(R.id.dhabbaBtn);
+        homeBtn = findViewById(R.id.homeSelected);
 
         //From intent
         id=getIntent().getStringExtra("id");
+        userName=getIntent().getStringExtra("name");
         user.setText(getIntent().getStringExtra("name"));
 
 
@@ -103,6 +108,8 @@ public class ClubsAndEventsActivity extends AppCompatActivity implements View.On
         upcoming.setOnClickListener(this);
         clubs.setOnClickListener(this);
         createEvent.setOnClickListener(this);
+        dhabbaBtn.setOnClickListener(this);
+        homeBtn.setOnClickListener(this);
 
 
     }
@@ -136,6 +143,13 @@ public class ClubsAndEventsActivity extends AppCompatActivity implements View.On
                                     intent.putExtra("name",userName);
                                     startActivity(intent);
                                     break;
+            case R.id.homeSelected:Toast.makeText(ClubsAndEventsActivity.this,"You are already at main page",Toast.LENGTH_SHORT).show();
+                                    break;
+            case R.id.dhabbaBtn: Intent intent1 = new Intent(ClubsAndEventsActivity.this,DhabbaActivity.class);
+                                 intent1.putExtra("name",userName);
+                                 intent1.putExtra("id",id);
+                                 startActivity(intent1);
+                                 break;
         }
     }
 }
