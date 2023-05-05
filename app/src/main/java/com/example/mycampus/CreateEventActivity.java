@@ -96,27 +96,57 @@ public class CreateEventActivity extends AppCompatActivity {
                 eventVenue = eventL.getText().toString();
                 eventdescp = longD.getText().toString();
                 eventDuration = eventDur.getText().toString();
-//                pic = "https://firebasestorage.googleapis.com/v0/b/let-em-glide.appspot.com/o/images%2F200220_5?alt=media&token=fc7ec476-150f-433b-bb7a-577fbc5e0f61";
-                FirebaseStorage.getInstance().getReference("images/"+fileName).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-                    @Override
-                    public void onSuccess(Uri uri) {
-                        pic=uri.toString();
-                        dur=Integer.parseInt(eventDuration);
-                        EventsModel eventsModel = new EventsModel(eventName,eventClub,eventTime,eventDate,pic,eventVenue,eventdescp,eventLikes,dur);
+                String Dateregex = "^(0?[1-9]|[12][0-9]|3[01])/(0?[1-9]|1[012])/((19|20)\\d\\d)$";
+                String TimeRegex="^([01]\\d|2[0-3]):([0-5]\\d)$";
+                String regex = ".*\\d+.*";
+                if(eventName.isEmpty())
+                {
+                    Toast.makeText(CreateEventActivity.this,"Please enter event name",Toast.LENGTH_SHORT).show();
+                }
+                else if(!eventDate.trim().matches(Dateregex))
+                {
+                    Toast.makeText(CreateEventActivity.this,"Date not in correct format",Toast.LENGTH_SHORT).show();
+                }
+                else if(!eventTime.trim().matches(TimeRegex))
+                {
+                    Toast.makeText(CreateEventActivity.this,"Time of not correct format",Toast.LENGTH_SHORT).show();
+                }
+                else if(eventVenue.isEmpty())
+                {
+                    Toast.makeText(CreateEventActivity.this,"Venue is empty",Toast.LENGTH_SHORT).show();
+                }
+                else if(eventdescp.isEmpty())
+                {
+                    Toast.makeText(CreateEventActivity.this,"Description is empty",Toast.LENGTH_SHORT).show();
+                }
+                else if(!(eventDuration.trim().matches(regex)))
+                {
+                    Toast.makeText(CreateEventActivity.this,"Duration should be time",Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    //                pic = "https://firebasestorage.googleapis.com/v0/b/let-em-glide.appspot.com/o/images%2F200220_5?alt=media&token=fc7ec476-150f-433b-bb7a-577fbc5e0f61";
+                    FirebaseStorage.getInstance().getReference("images/"+fileName).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                        @Override
+                        public void onSuccess(Uri uri) {
+                            pic=uri.toString();
+                            dur=Integer.parseInt(eventDuration);
+                            EventsModel eventsModel = new EventsModel(eventName,eventClub,eventTime,eventDate,pic,eventVenue,eventdescp,eventLikes,dur);
 
-                        FirebaseDatabase.getInstance().getReference("/Events/"+posistion).setValue(eventsModel).addOnCompleteListener(new OnCompleteListener<Void>() {
-                            @Override
-                            public void onComplete(@NonNull Task<Void> task) {
+                            FirebaseDatabase.getInstance().getReference("/Events/"+posistion).setValue(eventsModel).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                @Override
+                                public void onComplete(@NonNull Task<Void> task) {
 
-                                if(task.isSuccessful())
-                                    Toast.makeText(CreateEventActivity.this,"Class created",Toast.LENGTH_SHORT).show();
-                                else
-                                    Toast.makeText(CreateEventActivity.this,"Failed attempt",Toast.LENGTH_SHORT).show();
+                                    if(task.isSuccessful())
+                                        Toast.makeText(CreateEventActivity.this,"Class created",Toast.LENGTH_SHORT).show();
+                                    else
+                                        Toast.makeText(CreateEventActivity.this,"Failed attempt",Toast.LENGTH_SHORT).show();
 
-                            }
-                        });
-                    }
-                });
+                                }
+                            });
+                        }
+                    });
+                }
+
 
 
             }
