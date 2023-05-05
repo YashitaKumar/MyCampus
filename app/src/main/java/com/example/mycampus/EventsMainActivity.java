@@ -29,15 +29,18 @@ public class EventsMainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_events_main);
         Boolean todayVal;
+        Boolean pastVal;
 
         recyclerView = findViewById(R.id.eventMainDescp);
         name = getIntent().getStringExtra("event");
         todayVal=getIntent().getBooleanExtra("today",false);
+        pastVal=getIntent().getBooleanExtra("past",false);
 
         list = new ArrayList<>();
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         EventsMainAdapter eventsMainAdapter = new EventsMainAdapter();
         eventsMainAdapter.setToday(todayVal);
+        eventsMainAdapter.setPast(pastVal);
         recyclerView.setAdapter(eventsMainAdapter);
 
         FirebaseDatabase.getInstance().getReference("/Events").addListenerForSingleValueEvent(new ValueEventListener() {
@@ -57,6 +60,7 @@ public class EventsMainActivity extends AppCompatActivity {
                         int eventLikes = Integer.parseInt(Likes);
                         EventsModel eventsModel = new EventsModel(eventName,"",eventTime,eventDate,eventPic,eventVenue,eventDescp,eventLikes);
                         list.add(eventsModel);
+
                     }
                 }
                 eventsMainAdapter.setList(list);

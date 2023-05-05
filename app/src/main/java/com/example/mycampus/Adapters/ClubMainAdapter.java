@@ -23,6 +23,7 @@ public class ClubMainAdapter extends RecyclerView.Adapter<ClubMainAdapter.MyView
     private List<ClubModel> list;
     Context context;
 
+
     public void setContext(Context context) {
         this.context = context;
     }

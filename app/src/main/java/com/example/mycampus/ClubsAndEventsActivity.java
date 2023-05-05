@@ -133,6 +133,7 @@ public class ClubsAndEventsActivity extends AppCompatActivity implements View.On
                                     intent.putExtra("id",id);
                                     intent.putExtra("club",eventClub);
                                     intent.putExtra("posistion",pos);
+                                    intent.putExtra("name",userName);
                                     startActivity(intent);
                                     break;
         }

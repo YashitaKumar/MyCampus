@@ -26,6 +26,11 @@ import java.util.concurrent.TimeUnit;
 public class EventsMainAdapter extends RecyclerView.Adapter<EventsMainAdapter.MyViewHolder> {
     List<EventsModel> list;
     Boolean today=false;
+    Boolean past=false;
+
+    public void setPast(Boolean past) {
+        this.past = past;
+    }
 
     public void setToday(Boolean today) {
         this.today = today;
@@ -93,7 +98,7 @@ public class EventsMainAdapter extends RecyclerView.Adapter<EventsMainAdapter.My
                     holder.btnFin.setVisibility(View.INVISIBLE);
                     Log.d("Event Status","Live");
                 }
-                else
+                else if(currT>endT)
                 {
                     holder.btnLike.setVisibility(View.INVISIBLE);
                     holder.btnFin.setVisibility(View.VISIBLE);
@@ -106,6 +111,14 @@ public class EventsMainAdapter extends RecyclerView.Adapter<EventsMainAdapter.My
             }
 
         }
+        if(past)
+        {
+            holder.btnLike.setVisibility(View.INVISIBLE);
+            holder.btnFin.setVisibility(View.VISIBLE);
+            holder.btnOn.setVisibility(View.INVISIBLE);
+            holder.register.setVisibility(View.INVISIBLE);
+        }
+
 
 
 
@@ -124,7 +137,7 @@ public class EventsMainAdapter extends RecyclerView.Adapter<EventsMainAdapter.My
 
     class MyViewHolder extends RecyclerView.ViewHolder{
         TextView name,descp,date,time,venue,likes;
-        Button btnLike,btnOn,btnFin;
+        Button btnLike,btnOn,btnFin,register;
         ImageView pic;
 
         public MyViewHolder(@NonNull View itemView) {
@@ -140,6 +153,7 @@ public class EventsMainAdapter extends RecyclerView.Adapter<EventsMainAdapter.My
             pic=itemView.findViewById(R.id.eventMainPic);
             btnFin=itemView.findViewById(R.id.Finished_Btn);
             btnOn=itemView.findViewById(R.id.Live_Btn);
+            register=itemView.findViewById(R.id.registerBtn);
 
         }
     }

@@ -36,6 +36,11 @@ public class TodayEventsFragment extends Fragment {
 
     RecyclerView recyclerView;
     List<EventsModel> list;
+    String userName;
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER

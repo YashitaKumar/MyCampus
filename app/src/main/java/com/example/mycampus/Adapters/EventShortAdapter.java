@@ -87,6 +87,7 @@ public class EventShortAdapter extends RecyclerView.Adapter<EventShortAdapter.My
                 String eventN = eventsModel.getEventName();
                 intent.putExtra("event",eventN);
                 intent.putExtra("today",today);
+                intent.putExtra("past",past);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(intent);
             }
