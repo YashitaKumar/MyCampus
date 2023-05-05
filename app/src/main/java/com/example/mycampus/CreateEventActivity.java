@@ -13,6 +13,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.mycampus.AllClubRelatedModels.EventsModel;
@@ -33,12 +34,13 @@ import java.util.Locale;
 
 public class CreateEventActivity extends AppCompatActivity {
     EditText name,longD,eventD,eventT,eventL,eventDur;
-    String eventName,eventDate,eventTime,eventVenue,eventdescp,eventDuration,pic,posistion,id,eventClub;
+    String eventName,eventDate,eventTime,eventVenue,eventdescp,eventDuration,pic,posistion,id,eventClub,user;
     int eventLikes = 0;
     int dur;
     long pos;
     Button submit;
     String fileName;
+    TextView userName;
 
     ActivityCreateEventBinding binding;
     Uri imageUri;
@@ -84,6 +86,10 @@ public class CreateEventActivity extends AppCompatActivity {
         eventClub=getIntent().getStringExtra("club");
         pos=getIntent().getLongExtra("posistion",0);
         posistion= Long.toString(pos);
+
+        user=getIntent().getStringExtra("name");
+        userName=findViewById(R.id.user_event);
+        userName.setText(user);
 
         fileName = id+"_"+posistion;
 

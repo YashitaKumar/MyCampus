@@ -39,6 +39,11 @@ public class ClubsFragment extends Fragment {
     List<ClubModel> list;
     List<EventsModel> eventsModelList;
     RecyclerView recyclerView;
+    String userName;
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER

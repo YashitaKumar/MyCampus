@@ -172,7 +172,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.9"/>
+            app:layout_constraintGuide_percent="0.92"/>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="0dp"
@@ -205,13 +205,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.87"/>
+            app:layout_constraintGuide_percent="0.9"/>
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/ss4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.97"/>
+            app:layout_constraintGuide_percent="0.99"/>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/CreateEvent"
@@ -224,8 +224,11 @@
             android:visibility="visible"
             android:backgroundTint="@color/yellow"
             android:src="@drawable/plus"
+            android:tint="@color/white"
             app:maxImageSize="30dp"
-            android:foregroundGravity="center"
+            app:fabCustomSize="68dp"
+            app:fabSize="auto"
+            android:layout_gravity="center"
             />
 
         <androidx.constraintlayout.widget.ConstraintLayout

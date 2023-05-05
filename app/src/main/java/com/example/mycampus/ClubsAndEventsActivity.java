@@ -125,7 +125,9 @@ public class ClubsAndEventsActivity extends AppCompatActivity implements View.On
         switch(view.getId())
         {
             case R.id.clubs:selected.animate().x(0).setDuration(100);
-                            replaceFrgament(new ClubsFragment());
+                            ClubsFragment clubsFragment =new ClubsFragment();
+                            clubsFragment.setUserName(userName);
+                            replaceFrgament(clubsFragment);
                             break;
             case R.id.today: int size =clubs.getWidth();
                             selected.animate().x(size).setDuration(100);

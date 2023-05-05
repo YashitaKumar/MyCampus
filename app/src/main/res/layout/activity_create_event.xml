@@ -16,21 +16,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.25"/>
+        app:layout_constraintGuide_percent="0.16"/>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guide11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.1"/>
+        app:layout_constraintGuide_percent="0.05"/>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guide12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.2"/>
+        app:layout_constraintGuide_percent="0.15"/>
+
 
 
     <ImageView
@@ -45,6 +46,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/user_event"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:text="MyCampus"
@@ -57,9 +59,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/guide11" />
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:orientation="vertical"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -67,65 +68,282 @@
         app:layout_constraintTop_toTopOf="@+id/guide2"
         android:background="@drawable/background">
 
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.02"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.12"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.1"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.9"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.13"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.23"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.24"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.34"/>\
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.35"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.45"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.46"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.56"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.57"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.67"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.68"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.85"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.3"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.7"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.86"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.93"/>
+
         <EditText
             android:id="@+id/eventName"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:hint="Event Name" />
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:hint="Event Name"
+            android:paddingLeft="10dp"
+            android:background="@drawable/edittext_bg"
+            android:drawableRight="@drawable/name_icon"
+            android:paddingRight="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/grey"
+            app:layout_constraintBottom_toBottomOf="@id/guide4"
+            app:layout_constraintEnd_toEndOf="@id/guide6"
+            app:layout_constraintStart_toStartOf="@id/guide5"
+            app:layout_constraintTop_toTopOf="@id/guide3"/>
 
         <EditText
             android:id="@+id/eventLong"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:hint="Give a Detailed event description" />
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:textColor="@color/black"
+            android:drawableRight="@drawable/discription_icon"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:textColorHint="@color/grey"
+            android:background="@drawable/edittext_bg"
+            android:hint="Give a Detailed event description"
+            app:layout_constraintBottom_toBottomOf="@id/guide8"
+            app:layout_constraintEnd_toEndOf="@id/guide6"
+            app:layout_constraintStart_toStartOf="@id/guide5"
+            app:layout_constraintTop_toTopOf="@id/guide7"/>
 
         <EditText
             android:id="@+id/eventD"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:hint="enter Date in format dd/mm/yy" />
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:textColor="@color/black"
+            android:paddingLeft="10dp"
+            android:textColorHint="@color/grey"
+            android:background="@drawable/edittext_bg"
+            android:hint="Enter Date in format dd/mm/yy"
+            android:drawableRight="@drawable/calender_icon"
+            android:paddingRight="10dp"
+            app:layout_constraintBottom_toBottomOf="@id/guide10"
+            app:layout_constraintEnd_toEndOf="@id/guide6"
+            app:layout_constraintStart_toStartOf="@id/guide5"
+            app:layout_constraintTop_toTopOf="@id/guide9"/>
 
         <EditText
             android:id="@+id/eventT"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:hint="enter time in hh:mm" />
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:hint="Enter time in hh:mm"
+            android:paddingLeft="10dp"
+            android:textColorHint="@color/grey"
+            android:background="@drawable/edittext_bg"
+            android:drawableRight="@drawable/clock"
+            android:paddingRight="10dp"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@id/guide14"
+            app:layout_constraintEnd_toEndOf="@id/guide6"
+            app:layout_constraintStart_toStartOf="@id/guide5"
+            app:layout_constraintTop_toTopOf="@id/guide13"/>
 
         <EditText
             android:id="@+id/eventDur"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:hint="enter event duration in hours" />
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:paddingLeft="10dp"
+            android:textColorHint="@color/grey"
+            android:drawableRight="@drawable/clock"
+            android:paddingRight="10dp"
+            android:hint="Enter event duration in hours"
+            android:background="@drawable/edittext_bg"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@id/guide16"
+            app:layout_constraintEnd_toEndOf="@id/guide6"
+            app:layout_constraintStart_toStartOf="@id/guide5"
+            app:layout_constraintTop_toTopOf="@id/guide15"/>
 
         <EditText
             android:id="@+id/eventL"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:hint="enter Venue" />
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:hint="Enter Venue"
+            android:paddingLeft="10dp"
+            android:textColorHint="@color/grey"
+            android:drawableRight="@drawable/location"
+            android:paddingRight="10dp"
+            android:textColor="@color/black"
+            android:background="@drawable/edittext_bg"
+            app:layout_constraintBottom_toBottomOf="@id/guide18"
+            app:layout_constraintEnd_toEndOf="@id/guide6"
+            app:layout_constraintStart_toStartOf="@id/guide5"
+            app:layout_constraintTop_toTopOf="@id/guide17"/>
 
         <ImageView
             android:id="@+id/firebaseimage"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:src="@drawable/profile_icon" />
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/image"
+            app:layout_constraintBottom_toBottomOf="@id/guide20"
+            app:layout_constraintEnd_toEndOf="@id/guide22"
+            app:layout_constraintStart_toStartOf="@id/guide21"
+            app:layout_constraintTop_toTopOf="@id/guide19"/>
 
         <Button
             android:id="@+id/selectImagebtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Select" />
+            android:text="Select"
+            app:layout_constraintBottom_toBottomOf="@id/guide24"
+            app:layout_constraintEnd_toEndOf="@id/guide21"
+            app:layout_constraintStart_toStartOf="@id/guide5"
+            app:layout_constraintTop_toTopOf="@id/guide23"/>
 
         <Button
             android:id="@+id/uploadimagebtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Upload" />
+            android:text="Upload"
+            app:layout_constraintBottom_toBottomOf="@id/guide24"
+            app:layout_constraintEnd_toEndOf="@id/guide6"
+            app:layout_constraintStart_toStartOf="@id/guide22"
+            app:layout_constraintTop_toTopOf="@id/guide23"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/create"
-            android:layout_width="200dp"
+            android:layout_width="0dp"
             android:layout_height="50dp"
-            android:text="Submit" />
-    </LinearLayout>
+            android:text="Submit"
+            android:background="@drawable/button_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/guide22"
+            app:layout_constraintStart_toStartOf="@id/guide21"
+            app:layout_constraintTop_toTopOf="@id/guide6"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

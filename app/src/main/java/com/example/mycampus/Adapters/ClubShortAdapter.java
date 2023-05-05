@@ -23,6 +23,11 @@ import java.util.List;
 public class ClubShortAdapter extends RecyclerView.Adapter<ClubShortAdapter.MyViewHolder> {
     private List<ClubModel> clubModelList;
     Context context;
+    String userName;
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
 
     public Context getContext() {
         return context;
