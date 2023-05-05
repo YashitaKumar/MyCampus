@@ -137,12 +137,17 @@ public class CreateEventActivity extends AppCompatActivity {
                                 public void onComplete(@NonNull Task<Void> task) {
 
                                     if(task.isSuccessful())
-                                        Toast.makeText(CreateEventActivity.this,"Class created",Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(CreateEventActivity.this,"Event created",Toast.LENGTH_SHORT).show();
                                     else
                                         Toast.makeText(CreateEventActivity.this,"Failed attempt",Toast.LENGTH_SHORT).show();
 
                                 }
                             });
+                        }
+                    }).addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            Toast.makeText(CreateEventActivity.this,"You have not uploaded any image",Toast.LENGTH_SHORT).show();
                         }
                     });
                 }
